@@ -14,7 +14,55 @@ export default function Home() {
   return (
     <Section>
       <Container>
-        <ToDelete />
+        <div className="">
+      <main className="grid grid-cols-12 gap-4">
+        <div className="grid col-span-12 grid-cols-subgrid gap-4 py-48">
+          <div className="col-start-3 col-span-5 text-4xl">SPREADING HAPPINESS ONE GAME AT A TIME</div>
+          <div className="flex justify-center col-end-11">INSERT ART HERE</div>
+        </div>
+        
+        <div className="col-start-2 col-span-2 text-2xl">
+          <div className="sticky top-20 items-start">WHO WE ARE</div>
+        </div>
+        <div className="col-start-4 col-end-10">
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+        </div>
+        <div className="col-start-2 col-span-2 text-2xl">
+          <div className="sticky top-20 items-start">WHO WE ARE</div>
+        </div>
+        <div className="col-start-4 col-end-10">
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+        </div>
+        <div className="col-start-2 col-span-2 text-2xl">
+          <div className="sticky top-20 items-start">WHO WE ARE</div>
+        </div>
+        <div className="col-start-4 col-end-10">
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+        </div>
+        <div className="col-start-2 col-span-2 text-2xl">
+          <div className="sticky top-20 items-start">WHO WE ARE</div>
+        </div>
+        <div className="col-start-4 col-end-10">
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+        </div>
+        <div className="col-start-2 col-span-2 text-2xl">
+          <div className="sticky top-20 items-start">WHO WE ARE</div>
+        </div>
+        <div className="col-start-4 col-end-10">
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
+        </div>
+      </main>
+    </div>
       </Container>
     </Section>
   );
