@@ -19,6 +19,18 @@
         var(--font-sans), ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+    --font-heading: var(--font-heading), var(--font-sans);
+    --font-space: var(--font-space), var(--font-sans);
+
+    --color-brand-bg: #111111;
+    --color-brand-fg: #f9f9f9;
+    --color-brand-muted: #dddddd;
+    --color-brand-accent: #40d9ff;
+    --color-brand-pink: #f70069;
+    --color-brand-blue: #3bbeff;
+    --color-brand-magenta: #b2054e;
+    --color-brand-indigo: #004be8;
+    --color-brand-donate: #ff4379;
 
     --color-border: hsl(var(--border));
     --color-input: hsl(var(--input));

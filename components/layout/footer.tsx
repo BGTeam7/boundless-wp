@@ -1,62 +1,67 @@
-import { Section, Container } from "@/components/craft";
-import { ThemeToggle } from "@/components/theme/theme-toggle";
-import { mainMenu, contentMenu } from "@/menu.config";
-import { siteConfig } from "@/site.config";
-import Logo from "@/public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+const footerLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Pixel Games Studios", href: "/team" },
+  { label: "It's a Conspiracy Game", href: "#" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: "https://instagram.com" },
+  { label: "TikTok", href: "https://tiktok.com" },
+  { label: "X", href: "https://x.com" },
+  { label: "YouTube", href: "https://youtube.com" },
+  { label: "Twitch", href: "https://twitch.tv" },
+  { label: "Discord", href: "https://discord.com" },
+];
+
 export function Footer() {
   return (
-    <footer>
-      <Section>
-        <Container className="grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12">
-          <div className="flex flex-col gap-6 not-prose">
-            <Link href="/">
-              <h3 className="sr-only">{siteConfig.site_name}</h3>
+    <footer className="bg-brand-bg">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 pt-10 pb-14 sm:px-10">
+        <Image
+          src="/images/home/footer-plug.svg"
+          alt=""
+          aria-hidden
+          width={1387}
+          height={14}
+          className="h-auto w-full max-w-5xl"
+        />
+
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 font-space text-sm text-white">
+          {footerLinks.map(({ label, href }) => (
+            <Link key={label} href={href} className="hover:underline">
+              {label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-3">
+          {socialLinks.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="opacity-80 transition-opacity hover:opacity-100"
+            >
               <Image
-                src={Logo}
-                alt="Logo"
-                className="dark:invert"
-                width={42}
-                height={26.44}
+                src="/images/home/social-icon.svg"
+                alt={label}
+                width={24}
+                height={24}
+                className="size-6"
               />
             </Link>
-            <p>{siteConfig.site_description}</p>
-          </div>
-          <div className="flex flex-col gap-2 text-sm">
-            <h5 className="font-medium text-base">Website</h5>
-            {Object.entries(mainMenu).map(([key, href]) => (
-              <Link
-                className="hover:underline underline-offset-4"
-                key={href}
-                href={href}
-              >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2 text-sm">
-            <h5 className="font-medium text-base">Blog</h5>
-            {Object.entries(contentMenu).map(([key, href]) => (
-              <Link
-                className="hover:underline underline-offset-4"
-                key={href}
-                href={href}
-              >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </Link>
-            ))}
-          </div>
-        </Container>
-        <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
-          <ThemeToggle />
-          <p className="text-muted-foreground">
-            &copy; <a href="https://9d8.dev">9d8</a>. All rights reserved.
-            2025-present.
-          </p>
-        </Container>
-      </Section>
+          ))}
+        </div>
+
+        <p className="font-space text-sm text-white">
+          Boundless Gamers &copy; {new Date().getFullYear()}
+        </p>
+      </div>
     </footer>
   );
 }

@@ -5,7 +5,7 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  site_name: "next-wp",
-  site_description: "Starter template for Headless WordPress with Next.js",
+  site_name: "Boundless Gamers",
+  site_description: "Spreading happiness one game at a time.",
   site_domain: "https://next-wp.com",
 };

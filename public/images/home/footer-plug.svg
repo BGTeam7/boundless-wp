@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1387" height="14" viewBox="0 0 1387 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="plug vector">
+<path id="Vector" d="M23.6998 12.5725L23.6998 1.42749C23.6998 0.634441 22.9397 1.82136e-06 22.0176 1.74815e-06L8.7597 6.95499e-07C7.82516 6.21299e-07 7.07753 0.645014 7.07753 1.42749L7.07753 3.06647L0.747632 3.06647C0.336437 3.06647 2.3726e-06 3.35196 2.33901e-06 3.70091L1.70387e-06 10.2991C1.67028e-06 10.648 0.336436 10.9335 0.747631 10.9335L7.07753 10.9335L7.07753 12.5725C7.07753 13.3656 7.83762 14 8.75969 14L22.0176 14C22.9521 14 23.6998 13.355 23.6998 12.5725Z" fill="#F70069"/>
+<path id="Rectangle 17" d="M25.9568 7H1387" stroke="url(#paint0_linear_0_41)" stroke-width="5"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_41" x1="1387" y1="64.6216" x2="26.4488" y2="64.6216" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3BBEFF"/>
+<stop offset="1" stop-color="#F70069"/>
+</linearGradient>
+</defs>
+</svg>

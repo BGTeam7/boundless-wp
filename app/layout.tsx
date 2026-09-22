@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Inter as FontSans } from "next/font/google";
+import { Lexend, Lexend_Exa, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
@@ -11,9 +11,20 @@ import { cn } from "@/lib/utils";
 
 import type { Metadata } from "next";
 
-const font = FontSans({
+const fontSans = Lexend({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontHeading = Lexend_Exa({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-heading",
+});
+
+const fontSpace = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +45,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
+      <body
+        className={cn(
+          "min-h-screen font-sans antialiased",
+          fontSans.variable,
+          fontHeading.variable,
+          fontSpace.variable,
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

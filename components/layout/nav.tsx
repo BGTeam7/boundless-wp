@@ -1,56 +1,56 @@
-import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { mainMenu } from "@/menu.config";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
-import Logo from "@/public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 interface NavProps {
   className?: string;
-  children?: React.ReactNode;
   id?: string;
 }
 
-export function Nav({ className, children, id }: NavProps) {
+export function Nav({ className, id }: NavProps) {
   return (
     <nav
-      className={cn("sticky z-50 top-0 bg-background", "border-b", className)}
+      className={cn(
+        "sticky z-50 top-0 bg-brand-bg border-b border-white/10",
+        className,
+      )}
       id={id}
     >
-      <div
-        id="nav-container"
-        className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
-      >
-        <Link
-          className="hover:opacity-75 transition-all flex gap-4 items-center"
-          href="/"
-        >
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 sm:px-10">
+        <Link href="/" className="flex shrink-0 items-center">
           <Image
-            src={Logo}
-            alt="Logo"
-            loading="eager"
-            className="dark:invert"
-            width={42}
-            height={26.44}
+            src="/images/home/logo.svg"
+            alt={siteConfig.site_name}
+            width={170}
+            height={72}
+            priority
+            className="h-10 w-auto"
           />
-          <h2 className="text-sm">{siteConfig.site_name}</h2>
         </Link>
-        {children}
-        <div className="flex items-center gap-2">
-          <div className="mx-2 hidden md:flex">
-            {Object.entries(mainMenu).map(([key, href]) => (
-              <Button key={href} asChild variant="ghost" size="sm">
-                <Link href={href}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                </Link>
-              </Button>
-            ))}
-          </div>
-          <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
-          </Button>
+
+        <div className="hidden items-center gap-9 md:flex">
+          {mainMenu.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group flex flex-col items-center gap-1.5 font-heading font-bold text-brand-fg"
+            >
+              <span>{label}</span>
+              <span className="h-[3px] w-0 bg-gradient-to-l from-brand-blue to-brand-pink transition-all duration-200 group-hover:w-full" />
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Link
+            href="/donate"
+            className="hidden shrink-0 rounded-[5px] bg-brand-donate px-6 py-3 font-heading font-bold text-white shadow-[5px_5px_0px_0px_var(--color-brand-magenta)] transition-transform hover:-translate-y-0.5 sm:inline-flex"
+          >
+            DONATE
+          </Link>
           <MobileNav />
         </div>
       </div>

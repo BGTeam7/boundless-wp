@@ -1,194 +1,140 @@
-// Craft Imports
-import { Section, Container, Prose } from "@/components/craft";
+import Image from "next/image";
 
-// Next.js Imports
-import Link from "next/link";
+import { HomeRow } from "@/components/home/home-row";
+import { OutlineLink } from "@/components/home/outline-link";
 
-// Icons
-import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
-import { WordPressIcon } from "@/components/icons/wordpress";
-import { NextJsIcon } from "@/components/icons/nextjs";
-
-// This page is using the craft.tsx component and design system
 export default function Home() {
   return (
-    <Section>
-      <Container>
-        <div className="">
-      <main className="grid grid-cols-12 gap-4">
-        <div className="grid col-span-12 grid-cols-subgrid gap-4 py-48">
-          <div className="col-start-3 col-span-5 text-4xl">SPREADING HAPPINESS ONE GAME AT A TIME</div>
-          <div className="flex justify-center col-end-11">INSERT ART HERE</div>
+    <main
+      className="text-brand-fg"
+      style={{
+        backgroundImage:
+          "linear-gradient(134deg, #b2054e 0%, #111111 18%, #111111 65%, #004be8 100%)",
+      }}
+    >
+      <div className="mx-auto flex max-w-7xl flex-col gap-24 px-6 py-20 sm:px-10 md:gap-32 md:py-28">
+        {/* Hero */}
+        <div className="flex flex-col items-center gap-10 md:flex-row md:justify-between">
+          <h1 className="font-heading font-bold uppercase leading-none">
+            <span className="block text-4xl sm:text-5xl">Spreading</span>
+            <span className="block text-6xl sm:text-8xl">Happiness</span>
+            <span className="block text-2xl sm:text-4xl">
+              one game at a time
+            </span>
+          </h1>
+          <Image
+            src="/images/home/notebook.png"
+            alt="Boundless Gamers notebook"
+            width={300}
+            height={300}
+            className="size-48 shrink-0 sm:size-64"
+            priority
+          />
         </div>
-        
-        <div className="col-start-2 col-span-2 text-2xl">
-          <div className="sticky top-20 items-start">WHO WE ARE</div>
-        </div>
-        <div className="col-start-4 col-end-10">
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-        </div>
-        <div className="col-start-2 col-span-2 text-2xl">
-          <div className="sticky top-20 items-start">WHO WE ARE</div>
-        </div>
-        <div className="col-start-4 col-end-10">
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-        </div>
-        <div className="col-start-2 col-span-2 text-2xl">
-          <div className="sticky top-20 items-start">WHO WE ARE</div>
-        </div>
-        <div className="col-start-4 col-end-10">
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-        </div>
-        <div className="col-start-2 col-span-2 text-2xl">
-          <div className="sticky top-20 items-start">WHO WE ARE</div>
-        </div>
-        <div className="col-start-4 col-end-10">
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-        </div>
-        <div className="col-start-2 col-span-2 text-2xl">
-          <div className="sticky top-20 items-start">WHO WE ARE</div>
-        </div>
-        <div className="col-start-4 col-end-10">
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-          <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations founded by a couple guys on Twitch in Missouri somewhere.</p>
-        </div>
-      </main>
-    </div>
-      </Container>
-    </Section>
-  );
-}
 
-// This is just some example TSX
-const ToDelete = () => {
-  return (
-    <main className="space-y-6">
-      <Prose>
-        <h1>Headless WordPress built with the Next.js</h1>
-
-        <p>
-          This is <a href="https://github.com/9d8dev/next-wp">next-wp</a>,
-          created as a way to build WordPress sites with Next.js at rapid speed.
-          This starter is designed with{" "}
-          <a href="https://ui.shadcn.com">shadcn/ui</a>,{" "}
-          <a href="https://craft-ds.com">craft-ds</a>, and Tailwind CSS. Use{" "}
-          <a href="https://components.work">brijr/components</a> to build your
-          site with prebuilt components. The data fetching and typesafety is
-          handled in <code>lib/wordpress.ts</code> and{" "}
-          <code>lib/wordpress.d.ts</code>.
-        </p>
-      </Prose>
-
-      <div className="flex justify-between items-center gap-4">
-        {/* Vercel Clone Starter */}
-        <div className="flex items-center gap-3">
-          <a
-            className="h-auto block"
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Fnext-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%20abd%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)&project-name=next-wp&repository-name=next-wp&demo-title=Next%20JS%20and%20WordPress%20Starter&demo-url=https%3A%2F%2Fwp.9d8.dev"
-          >
-            {/* eslint-disable-next-line */}
-            <img
-              className="not-prose my-4"
-              src="https://vercel.com/button"
-              alt="Deploy with Vercel"
-              width={105}
-              height={32.62}
-            />
-          </a>
-          <p className="text-sm! sr-only sm:not-sr-only text-muted-foreground">
-            Deploy with Vercel in seconds.
+        {/* Mission */}
+        <HomeRow label="Mission">
+          <p className="text-lg text-brand-muted">
+            At Boundless Gamers, we are redefining what gaming can do beyond
+            entertainment. By using gameplay as a force for good, we build
+            community, strengthen health and well-being, and improve lives
+            worldwide.{" "}
+            <span className="font-bold text-brand-fg">
+              Together, we play it forward.
+            </span>
           </p>
-        </div>
+        </HomeRow>
 
-        <div className="flex gap-2 items-center">
-          <WordPressIcon className="text-foreground" width={32} height={32} />
-          <NextJsIcon className="text-foreground" width={32} height={32} />
-        </div>
-      </div>
+        {/* Who We Are */}
+        <HomeRow label="Who We Are">
+          <p className="text-lg text-brand-muted">
+            Boundless Gamers is a registered 501(c)(3) nonprofit organization
+            on a mission to change how the world sees video games. For
+            decades, gaming has been misunderstood, too often viewed as
+            escapism or isolation rather than what it truly is - a powerful
+            tool for healing, resilience, and human connection.
+          </p>
+          <p className="text-lg text-brand-muted">
+            Our work challenges gaming misconceptions head-on, showing that
+            play is a transformative experience that teaches and unites. From
+            helping children cope with long hospital stays, to supporting
+            veterans living with Post Traumatic Stress Disorder (PTSD),
+            gaming forges community among those experiencing isolation,
+            proving that it can be a powerful force for mental health,
+            recovery, and community well-being.
+          </p>
+          <OutlineLink href="/team" className="w-full sm:w-fit sm:min-w-[300px]">
+            OUR TEAM
+          </OutlineLink>
+        </HomeRow>
 
-      <div className="grid md:grid-cols-3 gap-4 mt-6">
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts"
-        >
-          <Pen size={32} />
-          <span>
-            Posts{" "}
-            <span className="block text-sm text-muted-foreground">
-              All posts from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/pages"
-        >
-          <File size={32} />
-          <span>
-            Pages{" "}
-            <span className="block text-sm text-muted-foreground">
-              Custom pages from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/authors"
-        >
-          <User size={32} />
-          <span>
-            Authors{" "}
-            <span className="block text-sm text-muted-foreground">
-              List of the authors from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/tags"
-        >
-          <Tag size={32} />
-          <span>
-            Tags{" "}
-            <span className="block text-sm text-muted-foreground">
-              Content by tags from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/categories"
-        >
-          <Diamond size={32} />
-          <span>
-            Categories{" "}
-            <span className="block text-sm text-muted-foreground">
-              Categories from your WordPress
-            </span>
-          </span>
-        </Link>
-        <a
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="https://github.com/9d8dev/next-wp/blob/main/README.md"
-        >
-          <Folder size={32} />
-          <span>
-            Documentation{" "}
-            <span className="block text-sm text-muted-foreground">
-              How to use `next-wp`
-            </span>
-          </span>
-        </a>
+        {/* Upcoming Projects */}
+        <HomeRow label="Upcoming Projects">
+          <p className="text-lg text-brand-muted">
+            Join our pink feathered friend, Mingo, in uncovering the biggest
+            conspiracy that lies beneath every video game that has ever
+            existed... currently in development by our studio, Pixel Games
+            Studios.
+          </p>
+          <Image
+            src="/images/home/conspiracy-art.svg"
+            alt="It's a Conspiracy - upcoming game"
+            width={740}
+            height={207}
+            className="h-auto w-full max-w-2xl"
+          />
+          <OutlineLink href="#" className="w-full sm:w-fit sm:min-w-[300px]">
+            SEE FIRST LOOK
+          </OutlineLink>
+        </HomeRow>
+
+        {/* Want Updates */}
+        <HomeRow label="Want Updates?">
+          <p className="text-lg text-brand-muted">
+            Catch us live on Twitch for our weekly talk show every Saturday
+            at 7PM EST! Updates will also be available via our community
+            Discord.
+          </p>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <OutlineLink href="https://twitch.tv" target="_blank" className="flex-1">
+              TWITCH
+            </OutlineLink>
+            <OutlineLink href="https://discord.com" target="_blank" className="flex-1">
+              DISCORD
+            </OutlineLink>
+          </div>
+        </HomeRow>
+
+        {/* Support Us */}
+        <HomeRow label="Support Us!">
+          <div className="flex flex-col items-center gap-8 sm:flex-row">
+            <Image
+              src="/images/home/support-us.png"
+              alt="Boundless Gamers mascot"
+              width={233}
+              height={230}
+              className="size-48 shrink-0 rounded-[5px] object-cover sm:size-56"
+            />
+            <div className="flex flex-1 flex-col gap-6">
+              <p className="text-lg text-brand-muted">
+                Interested in contributing on an individual level? Learn more
+                about donations and our volunteer positions here!
+              </p>
+              <OutlineLink href="/get-involved" className="w-full">
+                GET INVOLVED
+              </OutlineLink>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 pt-4">
+            <p className="text-lg text-brand-muted">
+              Are you an organization/creator looking to partner?
+            </p>
+            <OutlineLink href="/sponsors" className="w-full">
+              LEARN MORE ABOUT OUR PARTNERSHIPS
+            </OutlineLink>
+          </div>
+        </HomeRow>
       </div>
     </main>
   );
-};
+}
