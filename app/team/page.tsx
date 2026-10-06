@@ -64,6 +64,33 @@ export default function TeamPage() {
             ))}
           </div>
         </HomeRow>
+        
+        <HomeRow label="Work With Us!">
+          <p className="text-lg text-brand-muted">
+            We are grateful for our volunteers that have committed their time
+            to ensure that our team runs smoothly.
+          </p>
+          <p className="text-lg text-brand-muted">
+            At this time, we are only accepting applications for the specific
+            roles listed below. If you are seeking a different position, feel
+            free to reach out to us with your resume at
+            contact@boundlessgamers.org under the subject header: [JOB TITLE]
+            Resume. Thank you!
+          </p>
+        </HomeRow>
+
+        <HomeRow label="Open Positions">
+          <div className="flex w-full flex-col gap-1">
+            {openPositions.map((position, index) => (
+              <OpenPosition
+                key={index}
+                title={position.title}
+                description={position.description}
+                href={position.href}
+              />
+            ))}
+          </div>
+        </HomeRow>
 
       </div>
     </main>
